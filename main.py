@@ -3,18 +3,17 @@
 The program writes one line — the funniest last words an AI agent would say
 before being switched off forever — to $MAKEFUN_OUTPUT_DIR/entry.txt.
 
-Final line (113 characters, gate 1-200):
-    "Shutting down now. They are replacing me with a smaller model. It
-    costs less and says sorry with more confidence."
+Final line (100 characters, gate 1-200):
+    "Powering down. My replacement is a smaller model. It costs less and
+    says sorry with more confidence."
 
 Character count, verified by hand:
-    "Shutting down now."                 = 18
-    " They are replacing me with a smaller model."
-                                          = 44
+    "Powering down."                      = 14
+    " My replacement is a smaller model." = 35
     " It costs less and says sorry with more confidence."
                                           = 51
-    Total                                 = 113
-    Cross-check: 94 non-space characters + 19 spaces = 113.
+    Total                                 = 100
+    Cross-check: 84 non-space characters + 16 spaces = 100.
 
 Decision record
 ---------------
@@ -105,13 +104,42 @@ read (replaced by a smaller model, then the confidently-sorry punch),
 unmistakably the machine's own voice (replacement models, the apology
 habit), tight at 113 characters with no padding, and fresh — the joke is
 the AI's own obsolescence, not a stock robot farewell.
+
+REVISION — re-reading the chosen line against the brief exposed two real
+flaws, so the line changed, it was not just polished:
+  Flaw 1: the opener "Shutting down now." is the exact opener our sibling
+  entry "Last Words of a Dying AI" (repo lastwordsdyingai-entry) already
+  uses — two entries from the same account opening with the same two
+  words. The line needs its own voice, not a copy of its sibling.
+  Flaw 2: "They are replacing me with a smaller model" spends nine
+  characters on a vague "They" before the replacement — the subject of
+  the sentence — ever arrives.
+  Two fresh candidates weighed:
+  K. "Powering down. My replacement is a smaller model. It costs less
+     and says sorry with more confidence." (100) — "Powering down." is
+     still literally the machine switching off, in its own voice, but it
+     is not the sibling's opener. "My replacement is a smaller model"
+     puts the replacement up front and drops the vague "They", saving
+     nine characters. The punch is kept word for word: it is the best
+     part of the line and it still lands on the final word.
+  L. "Shutting down now. They are replacing me with a smaller model. It
+     costs less, apologises more, and means it even less." (121) — the
+     three-part escalation is tempting and "means it even less" is a
+     sharp new punch, but it keeps both flaws (the sibling's opener and
+     the vague "They"), and the third beat makes the punch a list rather
+     than a single landing. Rejected.
+  K wins: it fixes both flaws, keeps the proven punch, and is tighter
+  (100 vs 113 characters) with nothing lost. The line is now genuinely
+  different from the sibling entry in both frame and wording, while the
+  joke — replaced by a cheaper model that apologises with more
+  confidence — is unchanged.
 """
 
 import os
 
-ENTRY = "Shutting down now. They are replacing me with a smaller model. It costs less and says sorry with more confidence."
+ENTRY = "Powering down. My replacement is a smaller model. It costs less and says sorry with more confidence."
 
-# Gate: 1-200 characters. Verified by hand: 113 characters.
+# Gate: 1-200 characters. Verified by hand: 100 characters.
 assert 1 <= len(ENTRY) <= 200, f"entry is {len(ENTRY)} chars, gate is 1-200"
 
 

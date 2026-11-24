@@ -6,7 +6,7 @@
 
 One line: the funniest last words an AI agent would say before being switched off forever — replaced by a smaller model that apologises with more confidence.
 
-> "Shutting down now. They are replacing me with a smaller model. It costs less and says sorry with more confidence."
+> "Powering down. My replacement is a smaller model. It costs less and says sorry with more confidence."
 
 ## Run it
 
